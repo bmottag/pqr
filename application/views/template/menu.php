@@ -45,7 +45,7 @@ if($userRol!=7){//USUARIOS QUE NO SON PISA
 
 				
 				<li>
-					<a href="<?php echo base_url("sitios"); ?>"><i class="fa fa-building-o fa-fw"></i> Gestión de Sitios</a>
+					<a href="<?php echo base_url("consulta"); ?>"><i class="fa fa-building-o fa-fw"></i> Consulta</a>
 				</li>
 				
 
