@@ -4,26 +4,33 @@
 
 	    
 		/**
-		 * Lista de usuarios
-		 * @since 10/5/2017
+		 * Consulta de la busqueda
+		 * @since 6/8/2018
 		 */
-		public function get_users($arrDatos) 
+		public function get_resultado() 
 		{
+				$ano = $this->input->post('ano');
+				$prueba = $this->input->post('prueba');
+				$snpRegistro = $this->input->post('snp_registro');
+				$noDocumento = $this->input->post('no_documento');
+			
+			
 				$this->db->select();
-				$this->db->join('param_roles R', 'R.id_rol = U.fk_id_rol', 'INNER');
-				if (array_key_exists("idUsuario", $arrDatos)) {
-					$this->db->where('id_usuario', $arrDatos["idUsuario"]);
-				}
-				if (array_key_exists("idRol", $arrDatos)) {
-					$this->db->where('fk_id_rol', $arrDatos["idRol"]);
-				}
-				if (array_key_exists("codigo_dane", $arrDatos)) {
-					$where = "fk_codigo_dane is not NULL";
+				if ($ano && $ano != '') {
+					$where = "fecha_aplicacion like '%$ano%'";
 					$this->db->where($where);
 				}
+				if ($prueba && $prueba != '') {
+					$this->db->where('codigo_prueba', $prueba);
+				}
+				if ($snpRegistro && $snpRegistro != '') {
+					$this->db->where('snp_registro', $snpRegistro);
+				}
+				if ($noDocumento && $noDocumento != '') {
+					$this->db->where('numero_documento', $noDocumento);
+				}
 				
-				$this->db->order_by('nombres_usuario', 'asc');
-				$query = $this->db->get('usuario U');
+				$query = $this->db->get('aplicacion_pruebas');
 
 				if ($query->num_rows() > 0) {
 					return $query->result_array();
