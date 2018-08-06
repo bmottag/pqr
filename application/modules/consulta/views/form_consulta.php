@@ -39,11 +39,13 @@
 						<div class="form-group">
 							<label class="col-sm-4 control-label" for="ano">Año : </label>
 							<div class="col-sm-5">
-								<select name="ano" id="ano" class="form-control" >
-									<option value=''>Select...</option>
-									<?php for ($i = 0; $i < count($anos); $i++) { ?>
-										<option value="<?php echo $anos[$i]["anos"]; ?>"><?php echo $anos[$i]["anos"]; ?></option>	
-									<?php } ?>
+								<select name="anio" id="anio" class="form-control" required>
+									<option value='' >Select...</option>
+									<?php
+										for ($i = 2018; $i < 2030; $i++) {
+									?>
+										<option value='<?php echo $i; ?>'><?php echo $i; ?></option>
+									<?php } ?>									
 								</select>
 							</div>
 						</div>

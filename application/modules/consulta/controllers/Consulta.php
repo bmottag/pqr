@@ -17,13 +17,6 @@ class Consulta extends MX_Controller {
 	{
 			$this->load->model("general_model");
 			$arrParam = array(
-				"table" => "param_anos",
-				"order" => "anos",
-				"id" => "x"
-			);
-			$data['anos'] = $this->general_model->get_basic_search($arrParam);
-
-			$arrParam = array(
 				"table" => "param_pruebas",
 				"order" => "codigo_prueba",
 				"id" => "x"

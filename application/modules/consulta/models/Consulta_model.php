@@ -9,7 +9,7 @@
 		 */
 		public function get_resultado() 
 		{
-				$ano = $this->input->post('ano');
+				$ano = $this->input->post('anio');
 				$prueba = $this->input->post('prueba');
 				$snpRegistro = $this->input->post('snp_registro');
 				$noDocumento = $this->input->post('no_documento');
