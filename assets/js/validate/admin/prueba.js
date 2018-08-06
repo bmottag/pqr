@@ -1,15 +1,13 @@
 $( document ).ready( function () {
 	
+	$("#codigoPrueba").convertirMayuscula();
 	$("#nombrePrueba").convertirMayuscula();
-	$("#descripcion").convertirMayuscula();	
 	
 	$( "#form" ).validate( {
 		rules: {
-			nombrePrueba:		{ required: true, minlength: 3, maxlength:50 },
-			sigla:				{ required: true, minlength: 3, maxlength:10 },
-			descripcion:		{ required: true },
-			anio:				{ required: true },
-			semestre:			{ required: true }
+			codigoPrueba:		{ required: true, minlength: 3, maxlength:50 },
+			nombrePrueba:		{ required: true, minlength: 3, maxlength:15 },
+			anio:				{ required: true }
 		},
 		errorElement: "em",
 		errorPlacement: function ( error, element ) {

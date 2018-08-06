@@ -43,6 +43,10 @@ if($userRol==1){ //ADMIN
 						</li>
 						
 						<li>
+							<a href="<?php echo base_url("admin/pruebas"); ?>"><i class="fa fa-star fa-fw"></i> Pruebas</a>
+						</li>
+						
+						<li>
 							<a href="<?php echo base_url("admin/subir_aplicaciones"); ?>"><i class="fa fa-folder-open fa-fw"></i> Cargar aplicaciones pruebas</a>
 						</li>
 

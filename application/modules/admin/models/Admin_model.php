@@ -152,6 +152,35 @@
 				}
 		}
 		
+		/**
+		 * Add/Edit PRUEBA
+		 * @since 10/5/2017
+		 */
+		public function savePrueba() 
+		{
+				$idPrueba = $this->input->post('hddId');
+				
+				$data = array(
+					'nombre_prueba' => $this->input->post('nombrePrueba'),
+					'codigo_prueba' => $this->input->post('codigoPrueba'),
+					'anio_prueba' => $this->input->post('anio')
+				);
+				
+				//revisar si es para adicionar o editar
+				if ($idPrueba == '') {
+					$query = $this->db->insert('param_pruebas', $data);
+					$idPrueba = $this->db->insert_id();				
+				} else {
+					$this->db->where('id_prueba', $idPrueba);
+					$query = $this->db->update('param_pruebas', $data);
+				}
+				if ($query) {
+					return $idPrueba;
+				} else {
+					return false;
+				}
+		}
+		
 		
 	    
 	}
