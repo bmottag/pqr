@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 06-08-2018 a las 17:34:57
+-- Tiempo de generación: 06-08-2018 a las 18:19:53
 -- Versión del servidor: 10.1.16-MariaDB
 -- Versión de PHP: 5.6.24
 
@@ -788,39 +788,22 @@ INSERT INTO `aplicacion_pruebas` (`id_aplicacion_prueba`, `codigo_prueba`, `nomb
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `param_anos`
---
-
-CREATE TABLE `param_anos` (
-  `id_anos` int(1) NOT NULL,
-  `anos` int(1) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Volcado de datos para la tabla `param_anos`
---
-
-INSERT INTO `param_anos` (`id_anos`, `anos`) VALUES
-(1, 2018),
-(2, 2019);
-
--- --------------------------------------------------------
-
---
 -- Estructura de tabla para la tabla `param_pruebas`
 --
 
 CREATE TABLE `param_pruebas` (
   `id_prueba` int(10) NOT NULL,
-  `codigo_prueba` varchar(10) NOT NULL
+  `codigo_prueba` varchar(10) NOT NULL,
+  `anio_prueba` int(1) NOT NULL,
+  `nombre_prueba` varchar(250) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Volcado de datos para la tabla `param_pruebas`
 --
 
-INSERT INTO `param_pruebas` (`id_prueba`, `codigo_prueba`) VALUES
-(1, 'EK20181');
+INSERT INTO `param_pruebas` (`id_prueba`, `codigo_prueba`, `anio_prueba`, `nombre_prueba`) VALUES
+(1, 'EK20181', 2018, 'SABER T&T 2018-1');
 
 -- --------------------------------------------------------
 
@@ -890,13 +873,6 @@ ALTER TABLE `aplicacion_pruebas`
   ADD KEY `sesion` (`sesion`);
 
 --
--- Indices de la tabla `param_anos`
---
-ALTER TABLE `param_anos`
-  ADD PRIMARY KEY (`id_anos`),
-  ADD UNIQUE KEY `anos` (`anos`);
-
---
 -- Indices de la tabla `param_pruebas`
 --
 ALTER TABLE `param_pruebas`
@@ -927,11 +903,6 @@ ALTER TABLE `usuario`
 --
 ALTER TABLE `aplicacion_pruebas`
   MODIFY `id_aplicacion_prueba` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=729;
---
--- AUTO_INCREMENT de la tabla `param_anos`
---
-ALTER TABLE `param_anos`
-  MODIFY `id_anos` int(1) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 --
 -- AUTO_INCREMENT de la tabla `param_pruebas`
 --
