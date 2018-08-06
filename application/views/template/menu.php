@@ -24,7 +24,7 @@
 				</li>
 				
 				<li>
-					<a href="<?php echo base_url("consulta"); ?>"><i class="fa fa-building-o fa-fw"></i> Consulta</a>
+					<a href="<?php echo base_url("consulta"); ?>"><i class="fa fa-search fa-fw"></i> Consulta</a>
 				</li>
 		
 <?php 

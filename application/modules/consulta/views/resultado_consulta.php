@@ -5,7 +5,7 @@
 			<div class="panel panel-primary">
 				<div class="panel-heading">
 					<h4 class="list-group-item-heading">
-					<i class="fa fa-gear fa-fw"></i> RESULTADO DE LA CONSULTA
+					<i class="fa fa-search fa-fw"></i> RESULTADO DE LA CONSULTA
 					</h4>
 				</div>
 			</div>
@@ -18,7 +18,7 @@
 		<div class="col-lg-12">
 			<div class="panel panel-default">
 				<div class="panel-heading">
-					<i class="fa fa-users"></i> RESULTADO DE LA CONSULTA
+					<i class="fa fa-search"></i> RESULTADO DE LA CONSULTA
 				</div>
 				<div class="panel-body">
 
