@@ -43,7 +43,7 @@ if($userRol==1){ //ADMIN
 						</li>
 						
 						<li>
-							<a href="<?php echo base_url("admin/subir_aplicaciones"); ?>"><i class="fa fa-users fa-fw"></i> Cargar aplicaciones</a>
+							<a href="<?php echo base_url("admin/subir_aplicaciones"); ?>"><i class="fa fa-folder-open fa-fw"></i> Cargar aplicaciones pruebas</a>
 						</li>
 
                     </ul>
