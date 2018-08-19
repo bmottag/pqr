@@ -62,12 +62,42 @@
 									echo "<td>$lista[tipo_documento]</td>";
 									echo "<td class='text-right'>$lista[numero_documento]</td>";
 									echo "<td class='text-center'>$lista[sesion]</td>";
-									echo "<td>$lista[hr_f]</td>";
-									echo "<td>$lista[hr_a]</td>";
-									echo "<td>$lista[pa_f]</td>";
-									echo "<td>$lista[pa_a]</td>";
-									echo "<td>$lista[lf]</td>";
-									echo "<td>$lista[mu]</td>";
+									echo "<td>";
+						?>			
+<a href="<?php echo base_url("consulta/imagen/$lista[id_aplicacion_prueba]/hr_f"); ?>" target="_blank"><?php echo $lista['hr_f']; ?></a>
+						<?php
+									echo "</td>";
+									
+									echo "<td>";
+						?>			
+<a href="<?php echo base_url("consulta/imagen/$lista[id_aplicacion_prueba]/hr_a"); ?>" target="_blank"><?php echo $lista['hr_a']; ?></a>
+						<?php
+									echo "</td>";
+									
+									echo "<td>";
+						?>			
+<a href="<?php echo base_url("consulta/imagen/$lista[id_aplicacion_prueba]/pa_f"); ?>" target="_blank"><?php echo $lista['pa_f']; ?></a>
+						<?php
+									echo "</td>";
+									
+									echo "<td>";
+						?>			
+<a href="<?php echo base_url("consulta/imagen/$lista[id_aplicacion_prueba]/pa_a"); ?>" target="_blank"><?php echo $lista['pa_a']; ?></a>
+						<?php
+									echo "</td>";
+									
+									echo "<td>";
+						?>			
+<a href="<?php echo base_url("consulta/imagen/$lista[id_aplicacion_prueba]/lf"); ?>" target="_blank"><?php echo $lista['lf']; ?></a>
+						<?php
+									echo "</td>";
+									
+									echo "<td>";
+						?>			
+<a href="<?php echo base_url("consulta/imagen/$lista[id_aplicacion_prueba]/mu"); ?>" target="_blank"><?php echo $lista['mu']; ?></a>
+						<?php
+									echo "</td>";
+
 									echo "</tr>";
 							endforeach;
 						?>

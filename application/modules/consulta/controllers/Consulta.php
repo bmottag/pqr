@@ -42,6 +42,20 @@ class Consulta extends MX_Controller {
 			$this->load->view("layout", $data);
 	}
 	
+	/**
+	 * ver imagen
+     * @since 19/8/2018
+     * @author BMOTTAG
+	 */
+	public function imagen($idAplicacionPrueba, $imagen)
+	{	
+			$data['info'] = $this->consulta_model->get_info_aplicacion_prueba($idAplicacionPrueba);
+			$data['imagen'] = $imagen;
+			
+			$data["view"] = 'imagen';
+			$this->load->view("layout", $data);
+	}
+	
 	
 	
 	

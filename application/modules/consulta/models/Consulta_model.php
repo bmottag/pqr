@@ -65,6 +65,24 @@
 			}
 		}
 		
+		/**
+		 * Consulta informacion
+		 * @since 19/8/2018
+		 */
+		public function get_info_aplicacion_prueba($idAplicacionPrueba) 
+		{		
+				$this->db->select();
+				$this->db->where('id_aplicacion_prueba', $idAplicacionPrueba);
+
+				$query = $this->db->get('aplicacion_pruebas');
+
+				if ($query->num_rows() > 0) {
+					return $query->result_array();
+				} else {
+					return false;
+				}
+		}
+		
 
 		
 	    
