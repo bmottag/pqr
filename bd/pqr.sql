@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 06-08-2018 a las 18:19:53
+-- Tiempo de generación: 19-08-2018 a las 20:31:31
 -- Versión del servidor: 10.1.16-MariaDB
 -- Versión de PHP: 5.6.24
 
@@ -788,6 +788,22 @@ INSERT INTO `aplicacion_pruebas` (`id_aplicacion_prueba`, `codigo_prueba`, `nomb
 -- --------------------------------------------------------
 
 --
+-- Estructura de tabla para la tabla `auditoria`
+--
+
+CREATE TABLE `auditoria` (
+  `id_auditoria` int(10) NOT NULL,
+  `fk_id_usuario` int(10) NOT NULL,
+  `fecha` datetime NOT NULL,
+  `anio` int(1) NOT NULL,
+  `codigo_prueba` varchar(50) NOT NULL,
+  `snp_registro` varchar(50) NOT NULL,
+  `numero_documento` int(10) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
 -- Estructura de tabla para la tabla `param_pruebas`
 --
 
@@ -873,6 +889,13 @@ ALTER TABLE `aplicacion_pruebas`
   ADD KEY `sesion` (`sesion`);
 
 --
+-- Indices de la tabla `auditoria`
+--
+ALTER TABLE `auditoria`
+  ADD PRIMARY KEY (`id_auditoria`),
+  ADD KEY `fk_id_user` (`fk_id_usuario`);
+
+--
 -- Indices de la tabla `param_pruebas`
 --
 ALTER TABLE `param_pruebas`
@@ -903,6 +926,11 @@ ALTER TABLE `usuario`
 --
 ALTER TABLE `aplicacion_pruebas`
   MODIFY `id_aplicacion_prueba` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=729;
+--
+-- AUTO_INCREMENT de la tabla `auditoria`
+--
+ALTER TABLE `auditoria`
+  MODIFY `id_auditoria` int(10) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT de la tabla `param_pruebas`
 --
