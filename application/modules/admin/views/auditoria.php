@@ -18,7 +18,7 @@
 		<div class="col-lg-12">
 			<div class="panel panel-default">
 				<div class="panel-heading">
-					<i class="fa fa-users"></i> LISTA DE CONSULTAS
+					<i class="fa fa-eye"></i> LISTA DE CONSULTAS
 				</div>
 				<div class="panel-body">
 
