@@ -190,7 +190,7 @@
 				$this->db->select('nombres_usuario, apellidos_usuario, A.*');
 				$this->db->join('usuario U', 'U.id_usuario = A.fk_id_usuario', 'INNER');
 				
-				$this->db->order_by('nombres_usuario, apellidos_usuario', 'asc');
+				$this->db->order_by('fecha', 'desc');
 				$query = $this->db->get('auditoria A');
 
 				if ($query->num_rows() > 0) {
