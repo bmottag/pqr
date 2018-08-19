@@ -39,6 +39,32 @@
 				}
 		}
 		
+		/**
+		 * Guardo auditoria
+		 * @since 19/8/2018
+		 */
+		public function save_auditoria() 
+		{
+			$idUser = $this->session->userdata("id");
+		
+			$data = array(
+				'fk_id_user' => $idUser ,
+				'fecha' => date("Y-m-d G:i:s"),
+				'anio' => $this->input->post('anio'),
+				'codigo_prueba' => $this->input->post('prueba'),
+				'snp_registro' => $this->input->post('snp_registro'),
+				'numero_documento' => $this->input->post('no_documento')
+			);
+						
+			$query = $this->db->insert('auditoria', $data);
+			
+			if ($query) {
+				return true;
+			} else {
+				return false;
+			}
+		}
+		
 
 		
 	    

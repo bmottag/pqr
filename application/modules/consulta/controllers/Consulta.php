@@ -34,6 +34,8 @@ class Consulta extends MX_Controller {
 	 */
 	public function resultado()
 	{
+			$this->consulta_model->save_auditoria(); //Guardo auditoria
+			
 			$data['info'] = $this->consulta_model->get_resultado();
 	
 			$data["view"] = 'resultado_consulta';
