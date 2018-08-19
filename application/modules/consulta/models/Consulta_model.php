@@ -48,7 +48,7 @@
 			$idUser = $this->session->userdata("id");
 		
 			$data = array(
-				'fk_id_user' => $idUser ,
+				'fk_id_usuario' => $idUser ,
 				'fecha' => date("Y-m-d G:i:s"),
 				'anio' => $this->input->post('anio'),
 				'codigo_prueba' => $this->input->post('prueba'),
