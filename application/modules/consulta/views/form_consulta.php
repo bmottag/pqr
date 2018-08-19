@@ -1,4 +1,4 @@
-<script type="text/javascript" src="<?php echo base_url("assets/js/validate/password.js"); ?>"></script>
+<script type="text/javascript" src="<?php echo base_url("assets/js/validate/consulta.js"); ?>"></script>
 
 <div id="page-wrapper">
 
