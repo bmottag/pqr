@@ -181,6 +181,25 @@
 				}
 		}
 		
+		/**
+		 * Lista auditoria
+		 * @since 19/8/2018
+		 */
+		public function get_auditoria($arrDatos) 
+		{
+				$this->db->select('nombres_usuario, apellidos_usuario, A.*');
+				$this->db->join('usuario U', 'U.id_usuario = A.fk_id_usuario', 'INNER');
+				
+				$this->db->order_by('nombres_usuario, apellidos_usuario', 'asc');
+				$query = $this->db->get('auditoria A');
+
+				if ($query->num_rows() > 0) {
+					return $query->result_array();
+				} else {
+					return false;
+				}
+		}
+		
 		
 	    
 	}

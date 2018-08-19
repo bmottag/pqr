@@ -49,6 +49,12 @@ if($userRol==1){ //ADMIN
 						<li>
 							<a href="<?php echo base_url("admin/subir_aplicaciones"); ?>"><i class="fa fa-folder-open fa-fw"></i> Cargar aplicaciones pruebas</a>
 						</li>
+						
+						<li class="divider"></li>
+						
+						<li>
+							<a href="<?php echo base_url("admin/auditoria"); ?>"><i class="fa fa-eye fa-fw"></i> Auditoría</a>
+						</li>
 
                     </ul>
                     <!-- /.dropdown-messages -->

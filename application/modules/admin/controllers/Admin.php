@@ -375,6 +375,25 @@ class Admin extends MX_Controller {
 
 			echo json_encode($data);
     }
+	
+	/**
+	 * auditoria List
+     * @since 19/8/2018
+     * @author BMOTTAG
+	 */
+	public function auditoria()
+	{
+			$userRol = $this->session->rol;
+			if ($userRol != 1 ) { 
+				show_error('ERROR!!! - You are in the wrong place.');	
+			}
+
+			$arrParam = array();
+			$data['info'] = $this->admin_model->get_auditoria($arrParam);
+			
+			$data["view"] = 'auditoria';
+			$this->load->view("layout", $data);
+	}
 
 	
 	
